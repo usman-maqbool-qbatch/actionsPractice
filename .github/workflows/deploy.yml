@@ -28,6 +28,6 @@ jobs:
           username: ${{ github.actor }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /app
+            cd /apps/test
             npm start
             # Add any other necessary deployment commands
