@@ -30,4 +30,4 @@ jobs:
           script: |
             cd /apps/test/actionsPractice
             npm start
-            # Add any other necessary deployment commands test_1.4
+            # Add any other necessary deployment commands test_1.5
