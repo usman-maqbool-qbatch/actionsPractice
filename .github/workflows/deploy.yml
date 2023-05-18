@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: "16"
 
+      - name: Log Message host
+        run: echo "This is a log message ${{ secrets.SSH_SERVER_HOST }}"
+
       - name: Install dependencies
         run: npm install
 
