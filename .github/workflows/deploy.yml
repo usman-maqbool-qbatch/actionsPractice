@@ -13,16 +13,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: "16"
-
       - name: Log Message host
         run: echo "This is a log message ${{ secrets.SSH_SERVER_HOST }}"
-
-      - name: Install dependencies
-        run: npm install
 
       - name: Deploy to SSH server
         uses: appleboy/ssh-action@master
@@ -34,5 +26,10 @@ jobs:
           script: |
             whoami
             cd apps/test/actionsPractice
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh
+
+            echo "Node version is $(node -v)"
+            echo "Npm version is $(npm -v)"
             npm start
             # Add any other necessary deployment commands test_1.9
