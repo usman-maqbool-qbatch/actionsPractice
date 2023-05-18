@@ -29,6 +29,7 @@ jobs:
         with:
           host: 137.184.137.85
           username: root
+          passphrase: qbatch
           key: ${{ secrets.SSH_PRIVATE_KEY}}
           script: |
             cd /apps/test/actionsPractice
