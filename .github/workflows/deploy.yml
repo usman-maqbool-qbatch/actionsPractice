@@ -32,6 +32,7 @@ jobs:
           passphrase: qbatch
           key: ${{ secrets.SSH_PRIVATE_KEY}}
           script: |
-            cd /apps/test/actionsPractice
+            whoami
+            cd apps/test/actionsPractice
             npm start
             # Add any other necessary deployment commands test_1.9
