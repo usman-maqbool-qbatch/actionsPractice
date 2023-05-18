@@ -10,12 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Log Message host
-        run: echo "This is a log message ${{ secrets.SSH_SERVER_HOST }}"
-
       - name: Deploy to SSH server
         uses: appleboy/ssh-action@master
         with:
