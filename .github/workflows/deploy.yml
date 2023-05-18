@@ -20,6 +20,7 @@ jobs:
           script: |
             whoami
             cd apps/test/actionsPractice
+            git pull origin main
             export NVM_DIR=~/.nvm
             source ~/.nvm/nvm.sh
 
