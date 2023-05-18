@@ -26,5 +26,5 @@ jobs:
 
             echo "Node version is $(node -v)"
             echo "Npm version is $(npm -v)"
-            pm2 start app.js
+            pm2 restart app.js
             # Add any other necessary deployment commands test_2.5
