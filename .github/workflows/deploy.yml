@@ -28,9 +28,9 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_SERVER_HOST }}
-          username: ${{ secrets.USER_NAME }}
+          username: ${{ secrets.USERNAME }}
           password: ${{secrets.PASSWORD}}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          key: qbatch
           script: |
             cd /apps/test/actionsPractice
             npm start
