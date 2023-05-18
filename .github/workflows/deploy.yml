@@ -27,11 +27,10 @@ jobs:
       - name: Deploy to SSH server
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.SSH_SERVER_HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{secrets.PASSWORD}}
-          key: qbatch
+          host: 137.184.137.85
+          username: root
+          key: ${{ secrets.SSH_PRIVATE_KEY}}
           script: |
             cd /apps/test/actionsPractice
             npm start
-            # Add any other necessary deployment commands test_1.8
+            # Add any other necessary deployment commands test_1.9
