@@ -28,7 +28,8 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_SERVER_HOST }}
-          username: ${{ github.actor }}
+          username: ${{ secrets.USER_NAME }}
+          password: ${{secrets.PASSWORD}}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd /apps/test/actionsPractice
